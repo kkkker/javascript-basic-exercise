@@ -8,5 +8,10 @@ export default function formatNumber(number, option) {
   // * Please implement the function and pass all the tests in format_number_spec.js.
   // * Please do NOT modify the signature of the function.
 
-  throw new Error('Please delete this line and implement the function');
+  let res = '';
+  if (arguments.length > 1 && option.currency === true) {
+    res += '$ '
+  }
+  res += number.toFixed(2);
+  return res;
 }
